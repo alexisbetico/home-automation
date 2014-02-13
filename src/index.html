@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Home automation</title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript">
+		// Create an object in the global scope which will contain the rest 
+		// of the objects for the application  
+		var HA = {}; // HA (HomeAutomation) name of the application
+	</script>
+	<script type="text/javascript" src="js/server_manager.js"></script>
+	<script type="text/javascript" src="js/home_automation.js"></script>
+	<link type="text/css" rel="stylesheet" href="stylesheets/home-automation.css" />	
+</head>
+<body>
+	<header class="site-header">
+	    <div class="main-wrapper">
+			<h1>Home automation</h1>
+		</div>
+	</header>
+	<section class="home">
+		<div id="lightContainer" class="light-container"></div>
+		<div class="home-content main-wrapper">
+			<div id="temperatureContainer" class="temperature-container"></div>
+			<div class="home-window-container">
+				<div id="homeWindow" class="home-window"></div>
+			</div>
+			<div class="curtains-container main-wrapper">
+				<div id="curtainLeft" class="curtain curtain-left"></div>
+				<div id="curtainsSeparator" class="curtains-separator"></div>
+				<div id="curtainRight" class="curtain curtain-right"></div>
+			</div>
+			<div id="temperatureIndicator" class="temperature-indicator"></div>
+			<!-- YOUR VISUALIZATION HERE 
+			<div id="temperatureIndicator" class="temperature-indicator"></div>
+			 -->
+		</div>
+	</section>
+	<footer class="controls">
+		<div class="controls-container main-wrapper">
+			<ul class="horizontal index clearfix">
+				<li>
+					<span class="control-title">Light</span>
+					<div class="slideThree">	
+						<input type="checkbox" id="lightSwitch" checked />
+						<label for="lightSwitch"></label>
+					</div>
+				</li>
+				<li>
+					<label class="control-title" for="temperatureRange">Temperature</label>
+					<input type="range" id="temperatureRange" min="18" max="30" value="22.5" step="0.5" />
+					<div id="temperatureValue">22.5</div>
+				</li>
+				<li>
+					<span class="control-title">Curtains</span>
+					<div class="slideThree open-close">	
+						<input type="checkbox" id="curtainsSwitch" />
+						<label for="curtainsSwitch"></label>
+					</div>
+				</li>
+				<!-- YOUR CONTROL HERE 
+				<li>
+					<label class="control-label" for="myControl">Label</label>
+					<input type="checkbox" id="myControlId" />
+				</li>
+				-->
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

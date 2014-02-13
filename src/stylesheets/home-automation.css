@@ -1,0 +1,256 @@
+
+/* GENERAL */
+
+header,
+footer,
+.main-wrapper {
+	width: 80%;
+	min-width: 940px;
+	margin: 0 auto;
+}
+
+h1 {
+	margin: 0;
+	font-size: 28px;
+	color: rgb(240, 240, 240);
+}
+
+body {
+	margin: 0;
+	font-family: 'Verdana, Geneva, sans-serif';
+	
+	background-image: url('images/white_wall.png');	
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul.horizontal li {	
+	display: inline-block;
+	margin-right: 12px;
+	vertical-align: top;
+}
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+/* HEADER */
+
+.site-header {
+	height: 48px;
+	width: 100%;
+	line-height: 48px;
+	
+	background: linear-gradient(#4E4E4F, #282829);
+	color: white;
+	text-shadow: 1px 1px 1px #101857;
+}
+
+
+/* HOME SECTION */
+
+.home-content {
+	height: 450px;
+}
+
+.home-window-container {
+	width: 100%;
+	padding-top: 64px;
+}
+
+.home-window {
+	width: 450px;
+	height: 250px;
+	margin: 0 auto;
+	
+	background-image: url('images/window.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 12px solid rgba(0,0,20,0.70);
+	border-bottom-width: 24px;
+	box-shadow: 1px 1px 8px rgba(0,0,20,0.70);
+	border-radius: 5px;
+}
+
+.light-container {
+	position: absolute;
+	height: 450px;
+	width: 100%;
+	
+	background-color: black;
+	opacity: 0;
+	
+	z-index: 1;
+}
+
+.temperature-container {
+	display: inline-block;
+	position: absolute;
+	width: 28px;
+	height: 260px;
+	top: 175px;
+	margin-left: 112px;
+	
+	border: 5px solid #282829;
+	background-image: url('images/fire.jpg');
+	border-bottom-width: 24px;
+}
+	
+.temperature-container.cold {
+	background-image: url('images/snowflakes.jpg');
+	background-size: auto 50%;
+}
+	
+.temperature-container.hot {
+	box-shadow: 0 0 24px 4px rgba(222, 80, 44, 0.80);
+}
+	
+.temperature-container.very-hot {
+	box-shadow: 0 0 36px 6px rgba(228,28,28,0.90);	
+}
+
+.curtains-container {
+	position: absolute;
+	top: 80px;
+	text-align: center;
+	padding: 0;
+}
+
+.curtain {
+	display: inline-block;
+	height: 380px;
+	width: 260px;
+	background-image: url('images/curtain.jpg');
+	background-size: 40%;
+	
+	opacity: 0.9;
+	border: 1px solid black;
+}
+	
+.curtain.curtain-left {
+	border-bottom-right-radius: 50%;
+}
+	
+.curtain.curtain-right {
+	border-bottom-left-radius: 50%;
+}
+
+.curtains-separator {
+	display: inline-block;
+	width: 0;
+	height: 380px;
+	visibility: hidden;
+}
+
+
+/* CONTROLS */
+
+.controls {
+	width: 100%;
+}
+
+.controls-container {
+	text-align: center;
+}
+
+.control-title {
+	display: block;
+	margin-bottom: 6px;
+}
+
+
+/* Checkbox style from http://cssdeck.com/labs/css-checkbox-styles */
+.slideThree {
+	width: 80px;
+	height: 26px;
+	background: #333;
+
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	position: relative;
+
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+	-moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+}
+
+.slideThree.open-close {
+	width: 112px;
+}
+
+.slideThree:after {
+	content: 'OFF';
+	font: 12px/26px Arial, sans-serif;
+	color: #000;
+	position: absolute;
+	right: 10px;
+	z-index: 0;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px rgba(255,255,255,.15);
+}
+
+.slideThree:before {
+	content: 'ON';
+	font: 12px/26px Arial, sans-serif;
+	color: #00bf00;
+	position: absolute;
+	left: 10px;
+	z-index: 0;
+	font-weight: bold;
+}
+
+.slideThree.open-close:after {
+	content: 'CLOSE'
+}
+
+.slideThree.open-close:before {
+	content: 'OPEN'
+}
+
+.slideThree label {
+	display: block;
+	width: 34px;
+	height: 20px;
+
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	transition: all .4s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	z-index: 1;
+
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+	background: #fcfff4;
+
+	background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.slideThree.open-close label {
+	width: 50px;
+}
+
+.slideThree input[type=checkbox]:checked + label {
+	left: 43px;
+}
+
+.slideThree.open-close input[type=checkbox]:checked + label {
+	left: 59px;
+}
